@@ -1,16 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const ProductsItem = ({name,picture,price,todo}) => {
+import React from "react";
+import { Link } from "react-router-dom";
+const ProductsItem = ({ name, picture, price, product }) => {
   return (
-    <li><Link to={'/todo'} state={todo}>
-    <img src={picture} alt="" />
-    <p>{name}</p>
-    <p>{price}</p>
-    <p>{picture}</p>
-    
-</Link>
-</li>
-  )
-}
+    <li>
+      <Link to={"/product"} state={product}>
+        <img src={picture} alt="" />
+        <p>{name}</p>
+        <p>{price}</p>
+      </Link>
+    </li>
+  );
+};
 
-export default ProductsItem
+export default ProductsItem;

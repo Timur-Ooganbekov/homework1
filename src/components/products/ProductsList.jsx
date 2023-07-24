@@ -1,10 +1,14 @@
 import React from 'react'
 import ProductsItem from './ProductsItem'
 
-const ProductsList = ({todos}) => {
-   
+const ProductsList = ({products}) => {
+
   return (
-    <ul className='list'>{todos.map( (todo) => <ProductsItem key={todo.id} {...todo} todo={todo}/>)}</ul>
+    <ul className='list'>
+      {products.map( (product) => 
+        <ProductsItem key={product._id}
+         {...product} product={product}/>)}
+         </ul>
   )
 }
 
